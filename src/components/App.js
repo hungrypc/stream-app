@@ -6,12 +6,14 @@ import StreamEdit from './StreamEdit';
 import StreamDelete from './StreamDelete';
 import StreamList from './StreamList';
 import StreamShow from './StreamShow';
+import NavBar from './NavBar';
 
 
 const App = () => {
     return (
         <BrowserRouter>
-            <div>
+            <NavBar />
+            <div className="ui container">
                 <Switch>
                     <Route path="/" component={StreamList} exact />
                     <Route path="/new" component={StreamCreate} exact />
