@@ -26,11 +26,13 @@ class StreamCreate extends Component {
     }
 
     onSubmit = (formValues) => {
+        // formValues coming in via form, not explicit in handleSubmit
         this.props.createStream(formValues);
     }
 
     render() {
         return (
+            // handleSubmit prop from redux-form
             <form className="ui form error" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                 <Field name="title" component={this.renderInput} label="Enter Title" />
                 <Field name="description" component={this.renderInput} label="Enter Description" />
