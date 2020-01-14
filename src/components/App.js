@@ -16,10 +16,10 @@ const App = () => {
             <div className="ui container">
                 <Switch>
                     <Route path="/" component={StreamList} exact />
-                    <Route path="/new" component={StreamCreate} exact />
-                    <Route path="/edit" component={StreamEdit} exact />
-                    <Route path="/delete" component={StreamDelete} exact />
-                    <Route path="/show" component={StreamShow} exact />
+                    <Route path="/streams/new" component={StreamCreate} exact />
+                    <Route path="/streams/edit" component={StreamEdit} exact />
+                    <Route path="/streams/delete" component={StreamDelete} exact />
+                    <Route path="/streams/show" component={StreamShow} exact />
                 </Switch>
             </div>
         </BrowserRouter>
