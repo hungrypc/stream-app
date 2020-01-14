@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 
 import StreamCreate from './StreamCreate';
 import StreamEdit from './StreamEdit';
@@ -8,10 +8,13 @@ import StreamList from './StreamList';
 import StreamShow from './StreamShow';
 import NavBar from './NavBar';
 
+import history from '../history';
+
 
 const App = () => {
     return (
-        <BrowserRouter>
+        // using Router instead of BrowserRouter to be able to use history
+        <Router history={history}>
             <NavBar />
             <div className="ui container">
                 <Switch>
@@ -22,7 +25,7 @@ const App = () => {
                     <Route path="/streams/show" component={StreamShow} exact />
                 </Switch>
             </div>
-        </BrowserRouter>
+        </Router>
     );
 };
 
