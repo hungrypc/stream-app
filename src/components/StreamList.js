@@ -14,8 +14,13 @@ class StreamList extends Component {
             return (
                 <div className="right floated content">
                     <Link className="ui button primary"
-                    to={`/streams/edit/${stream.id}`}>Edit</Link>
-                    <button className="ui button negative">Delete</button>
+                    to={`/streams/edit/${stream.id}`}>
+                        Edit
+                    </Link>
+                    <Link className="ui button negative"
+                    to={`/streams/delete/${stream.id}`}>
+                        Delete
+                    </Link>
                 </div>
             )
         }
