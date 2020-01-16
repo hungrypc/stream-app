@@ -17,12 +17,13 @@ const App = () => {
         <Router history={history}>
             <NavBar />
             <div className="ui container">
+                {/* Switch prevents clashing components */}
                 <Switch>
                     <Route path="/" component={StreamList} exact />
                     <Route path="/streams/new" component={StreamCreate} exact />
                     <Route path="/streams/edit/:id" component={StreamEdit} exact />
                     <Route path="/streams/delete/:id" component={StreamDelete} exact />
-                    <Route path="/streams/show" component={StreamShow} exact />
+                    <Route path="/streams/:id" component={StreamShow} exact />
                 </Switch>
             </div>
         </Router>
