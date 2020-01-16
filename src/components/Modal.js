@@ -17,6 +17,7 @@ const Modal = (props) => {
             </div>
         </div>,
         // we create a new div with some id in html file for modal
+        // this is a portal so that the modal doesn't render as a direct child
         document.querySelector('#modal')
     )
 };

@@ -10,3 +10,5 @@ using:
 - lodash
 - google OAuth
 - json server
+- rtmp server
+- flv.js
